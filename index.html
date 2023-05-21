@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./img/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/style.min.css">
+        <title>Signal</title>
+    </head>
+<body class="body">
+    <div class="wrapper">
+        <div class="popup">
+      <div class="popup-container">
+            <div class="popup__body">
+                  <h2 class="popup-title">Обратная связь</h2>
+                  <p class="popup-subtitle">Наш сотрудник свяжется с вами в ближайнее время</p>
+                  <form action="" id="callback-form">
+                        <label for="">имя<br><input type="text" class="popup__form-name" placeholder="Введите ваше имя"></label>
+                        <label for="">телефон<br><input type="number" class="popup__form-tel" placeholder="+7 (___) ___ - __ - __"></label>
+                        <button type="submit" form="callback-form" id="popup__form-btn">связаться</button>
+                  </form>
+            </div>
+      </div>
+      <div class="popup__form-completed">
+            <div class="form-completed-container">
+                  <p class="form-completed_title">Наш сотрудник свяжется с вами в ближайнее время</p>
+                  <button id="popup__btn-confirm">ОК</button>
+            </div>
+      </div>
+</div>
+        <header class="header" id="headeranchor">
+     <div class="header__nav navigation">
+      <div class="header__nav-container">
+            <div class="header-logo"><a href="#headeranchor"><svg width="142" height="29" class="header-logo__img" viewBox="0 0 142 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_185_1850)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9763 1.53356C32.2508 1.79666 32.4679 2.11271 32.6141 2.46217C32.7604 2.81162 32.8326 3.18704 32.8263 3.56522V3.63823C32.8232 4.00656 32.7464 4.37064 32.6005 4.7095C32.4547 5.04837 32.2425 5.35534 31.9763 5.61275C31.7104 5.88447 31.391 6.09933 31.0379 6.24402C30.6848 6.38872 30.3055 6.46018 29.9233 6.45398C29.1605 6.4583 28.4267 6.16533 27.8804 5.63841C27.3342 5.1115 27.0194 4.39298 27.0043 3.63823V3.56522C26.998 3.18704 27.0702 2.81162 27.2164 2.46217C27.3627 2.11271 27.5798 1.79666 27.8543 1.53356C28.1239 1.26228 28.4462 1.04788 28.8018 0.903297C29.1574 0.758712 29.5389 0.686944 29.9233 0.692326C30.3055 0.686133 30.6848 0.757594 31.0379 0.902289C31.391 1.04698 31.7104 1.26184 31.9763 1.53356Z" fill="#EB5C60"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M136.148 23.7707V28.453H121.825V3.5652H127.647V23.7707H136.148ZM108.112 3.5652L118.184 28.453H112.651L110.678 23.1199H100.381L98.3926 28.453H92.9876L103.028 3.5652H108.112ZM101.985 18.7868H109.074L105.546 9.26337L101.985 18.7868ZM83.637 3.5652H89.3949V28.453H84.6154L72.0892 13.3584V28.453H66.3153V3.5652H71.1269L83.637 18.6598V3.5652ZM51.3352 8.0412C50.1919 8.02617 49.0555 8.21987 47.9831 8.6126C47.0119 8.97344 46.1271 9.53017 45.3849 10.2475C44.6454 10.958 44.0707 11.8191 43.7008 12.7712C43.3006 13.8039 43.1045 14.9032 43.1234 16.0091C43.1041 17.1099 43.3002 18.2041 43.7008 19.2312C44.0792 20.1836 44.6525 21.0483 45.3849 21.7708C46.1139 22.4929 46.9882 23.0553 47.9511 23.4215C49.012 23.8153 50.1381 24.0092 51.2711 23.9929C52.4119 23.9941 53.5449 23.8063 54.6231 23.4374C55.0258 23.2974 55.4171 23.1276 55.794 22.9294V15.6282H61.1027V25.7071C59.6645 26.7575 58.0527 27.5523 56.3393 28.0562C54.5895 28.5973 52.7675 28.8756 50.9342 28.8816C49.0726 28.901 47.2236 28.5781 45.4811 27.9292C43.8575 27.3361 42.3692 26.4298 41.1026 25.2627C39.8808 24.0994 38.905 22.7074 38.2316 21.1676C37.5444 19.5339 37.2006 17.7787 37.2212 16.0091C37.2185 15.2652 37.2742 14.5223 37.388 13.787C37.9311 13.388 38.4436 12.9498 38.9213 12.4759C40.8174 10.6446 42.0565 8.25007 42.4498 5.65717C43.3916 4.99936 44.416 4.46579 45.4971 4.06994C47.2633 3.42802 49.1331 3.11066 51.0144 3.13347C53.0757 3.1273 55.1203 3.49862 57.045 4.22866C57.6052 4.43295 58.1517 4.67259 58.6809 4.94609C58.8638 5.04133 59.2006 5.23814 59.6913 5.53337V10.8506C58.8977 10.2711 58.0614 9.75114 57.1893 9.29511C56.6157 9.02426 56.0202 8.80127 55.409 8.62847C54.7565 8.44557 54.092 8.30768 53.4202 8.21579C52.7306 8.10622 52.0336 8.04786 51.3352 8.0412V8.0412ZM27.0046 15.8345C27.9785 16.0497 28.9738 16.1562 29.9717 16.152C30.9311 16.1549 31.8881 16.057 32.8266 15.8599V28.453H27.0046V15.8345ZM22.7864 21.3644C22.7685 22.6224 22.4262 23.8549 21.792 24.9452C21.049 26.287 19.8863 27.354 18.4784 27.9864C16.8461 28.7538 15.0383 29.0822 13.237 28.9387C11.2675 28.8181 9.66895 28.4827 8.44146 27.9324C7.54886 27.5603 6.70105 27.0908 5.91376 26.5325V20.501C7.0199 21.5443 8.28268 22.4117 9.65718 23.0723C11.0215 23.7241 12.1015 24.0839 12.897 24.1516C13.6614 24.2222 14.4324 24.1468 15.1681 23.9294C15.7707 23.7614 16.3146 23.4318 16.7399 22.9771C17.0652 22.5893 17.2414 22.1001 17.2371 21.5962C17.2464 21.2861 17.1808 20.9784 17.0458 20.6984C16.9108 20.4185 16.7102 20.1745 16.4608 19.9867C15.8458 19.5243 15.1743 19.1403 14.4624 18.8439C13.6572 18.4915 12.7655 18.1265 11.7935 17.7487C10.8804 17.398 10.002 16.9644 9.16961 16.4535C8.42314 15.9947 7.75689 15.419 7.19686 14.7488C6.67796 14.1345 6.31209 13.4082 6.12868 12.6283C5.94422 11.8801 5.85054 11.1128 5.84961 10.3427C5.88652 9.40507 6.08167 8.48018 6.427 7.6063C6.87101 6.49334 7.61423 5.52181 8.57618 4.79689C9.61548 3.96518 11.0397 3.48584 12.8489 3.34934C14.3204 3.23093 15.8013 3.30565 17.2531 3.57155V3.57155C17.233 5.37842 17.6072 7.16829 18.3501 8.81894C17.8219 8.58561 17.2786 8.3873 16.7238 8.22532C15.8495 7.93348 14.9289 7.80118 14.0069 7.83486C13.4918 7.85506 12.9841 7.96243 12.5056 8.1523C12.252 8.26721 12.0258 8.4338 11.8416 8.64117C11.6869 8.82506 11.5564 9.02775 11.4535 9.24432C11.3472 9.48427 11.2697 9.7357 11.2226 9.9935C11.1654 10.3152 11.1546 10.6433 11.1905 10.9681C11.2321 11.2609 11.3378 11.5413 11.5001 11.7897C11.6624 12.038 11.8775 12.2484 12.1303 12.4061C12.7347 12.8422 13.4063 13.1788 14.1191 13.4029C14.8633 13.6484 15.8256 13.9954 17.0061 14.4441C18.0705 14.823 19.085 15.3271 20.0278 15.9456C20.8711 16.5375 21.5514 17.3287 22.0069 18.2471C22.5063 19.2128 22.7731 20.2797 22.7864 21.3644V21.3644Z" />
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_185_1850">
+                  <rect width="130.298" height="28.2464" fill="white" transform="translate(5.84961 0.692322)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+            </a>
+                  </div>
+            <div class="nav-body">
+                  <div class="nav-img">
+                        <div class="nav_burger-img">
+                              <img src="../img/Header/header_mobile/burger.png" alt="burger-icon">
+                        </div>
+                        <div class="nav_close-img">
+                              <img src="../img/Header/header_mobile/close.png" alt="close-icon">
+                        </div>
+                  </div>
+                  <nav class="nav">
+                        <ul class="nav-list-items">
+                              <li class="nav-list__item"><a href="#about">О нас</a></li>
+                              <li class="nav-list__item"><a href="#video">Ролики</a></li>
+                              <li class="nav-list__item"><a href="#service">Услуги</a></li>
+                              <li class="nav-list__item"><a href="#partners">Партнеры</a></li>
+                              <li class="nav-list__item"><a href="#contacts">Контакты</a></li>
+                        </ul>
+                  </nav>
+            </div>
+            <div class="social-icon"><a href="https://rutube.ru/" target="_blank"><img src="../img/Header/R.svg" alt="rutube-icon" class="social-icon_img"><img src="../img/Header/rutubeBIGbutton.svg" alt="socialButton" class="social-button_img"></a></div>
+      </div>
+      </div>
+      <div class="hero-content-container">
+      <div class="hero__content">
+      <h2 class="header-hero__title">Агентство <span>Signal<img src="../img/Header/redPoint.svg" alt="red-point" class="redpoint"></span> — услуги </br>
+            по креативному и техническому обеспечению мероприятий</h2>
+      </div>
+      <div class="header-hero__contacts_wrapper">
+            <p class="contacts__telephone telephone"><a href="tel:+79250774157"><span>+7(925)</span> 077-41-57</a></p>
+            <a href="#main-video__title" class="arrow-down">
+                  <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 30L37 44L51 30" stroke="white" stroke-width="2"/>
+                        <circle cx="36.5" cy="36.5" r="35.5" stroke="white" stroke-width="2"/>
+                        </svg>
+            </a>
+            <div class="contacts__email">
+                  <a href="mailto:info@signal-tv.com">
+                        <p><img src="../img/Header/Vector.svg" alt="icon-mail" class="contacts__email_img">info@signal-tv.com</p>
+                        </div>
+                  </a>
+            </div>
+      </div>
+</header>
+        <main class="main">
+    <div class="main-video" id="video">
+        <h2 class="main-video__title main-title" id="main-video__title">ролики</h2>
+        <div class="video-slider">
+            <!-- Carusel -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="../img/main/slideneo.jpg" alt="video-preview" class="swiper-slide__image"><div class="swiper-slide__play-icon">
+                    <svg class="swiper-slide__play-img" width="153" height="152" viewBox="0 0 154 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M125.736 76.3775C125.736 103.377 103.702 125.276 76.5085 125.276C49.3149 125.276 27.2812 103.377 27.2812 76.3775C27.2812 49.3775 49.3149 27.4785 76.5085 27.4785C103.702 27.4785 125.736 49.3775 125.736 76.3775Z" stroke="white" stroke-width="2"/>
+                        <path d="M89.2122 77.245L70.891 87.7536C70.2243 88.136 69.3935 87.6547 69.3935 86.8862L69.3935 65.869C69.3935 65.1004 70.2243 64.6191 70.891 65.0015L89.2122 75.5101C89.8821 75.8944 89.8821 76.8607 89.2122 77.245Z" stroke="white" stroke-width="2"/>
+                        </svg>
+                  </div><div class="swiper-slide__link">
+                    <div class="swiper-slide__link-title">Графика</div>
+                    <div class="swiper-slide__link-btn"><svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15.3496" cy="15.8901" r="15" fill="black"/>
+                        <path d="M17.267 12.6597H9.86133V20.6545H11.9226V18.0534H15.8722L17.6742 20.6545H19.9823L17.9951 18.0415C18.6123 17.9456 19.0566 17.7179 19.3282 17.3583C19.5997 16.9987 19.7355 16.4234 19.7355 15.6562V15.0569C19.7355 14.6014 19.6861 14.2419 19.5997 13.9662C19.5133 13.6905 19.3652 13.4508 19.1554 13.235C18.9332 13.0312 18.6863 12.8874 18.3901 12.7915C18.0939 12.7076 17.7236 12.6597 17.267 12.6597ZM16.9337 16.2915H11.9226V14.4216H16.9337C17.2176 14.4216 17.415 14.4696 17.5138 14.5535C17.6125 14.6374 17.6742 14.7932 17.6742 15.021V15.6922C17.6742 15.9319 17.6125 16.0877 17.5138 16.1716C17.415 16.2555 17.2176 16.2915 16.9337 16.2915Z" fill="white"/>
+                        <path d="M21.9972 12.2609C22.7675 12.2609 23.3923 11.6342 23.3923 10.8611C23.3923 10.0881 22.7675 9.46143 21.9972 9.46143C21.2264 9.46143 20.6016 10.0881 20.6016 10.8611C20.6016 11.6342 21.2264 12.2609 21.9972 12.2609Z" fill="#F41240"/>
+                        </svg></div>
+                  </div></div>
+                  <div class="swiper-slide"><img src="../img/main/slidedj.jpg" alt="video-preview" class="swiper-slide__image">
+                    <div class="swiper-slide__play-icon">
+                        <svg class="swiper-slide__play-img" width="153" height="152" viewBox="0 0 154 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M125.736 76.3775C125.736 103.377 103.702 125.276 76.5085 125.276C49.3149 125.276 27.2812 103.377 27.2812 76.3775C27.2812 49.3775 49.3149 27.4785 76.5085 27.4785C103.702 27.4785 125.736 49.3775 125.736 76.3775Z" stroke="white" stroke-width="2"/>
+                            <path d="M89.2122 77.245L70.891 87.7536C70.2243 88.136 69.3935 87.6547 69.3935 86.8862L69.3935 65.869C69.3935 65.1004 70.2243 64.6191 70.891 65.0015L89.2122 75.5101C89.8821 75.8944 89.8821 76.8607 89.2122 77.245Z" stroke="white" stroke-width="2"/>
+                            </svg>
+                      </div><div class="swiper-slide__link">
+                        <div class="swiper-slide__link-title">Moscow Night Sport</div>
+                        <div class="swiper-slide__link-btn"><svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15.3496" cy="15.8901" r="15" fill="black"/>
+                            <path d="M17.267 12.6597H9.86133V20.6545H11.9226V18.0534H15.8722L17.6742 20.6545H19.9823L17.9951 18.0415C18.6123 17.9456 19.0566 17.7179 19.3282 17.3583C19.5997 16.9987 19.7355 16.4234 19.7355 15.6562V15.0569C19.7355 14.6014 19.6861 14.2419 19.5997 13.9662C19.5133 13.6905 19.3652 13.4508 19.1554 13.235C18.9332 13.0312 18.6863 12.8874 18.3901 12.7915C18.0939 12.7076 17.7236 12.6597 17.267 12.6597ZM16.9337 16.2915H11.9226V14.4216H16.9337C17.2176 14.4216 17.415 14.4696 17.5138 14.5535C17.6125 14.6374 17.6742 14.7932 17.6742 15.021V15.6922C17.6742 15.9319 17.6125 16.0877 17.5138 16.1716C17.415 16.2555 17.2176 16.2915 16.9337 16.2915Z" fill="white"/>
+                            <path d="M21.9972 12.2609C22.7675 12.2609 23.3923 11.6342 23.3923 10.8611C23.3923 10.0881 22.7675 9.46143 21.9972 9.46143C21.2264 9.46143 20.6016 10.0881 20.6016 10.8611C20.6016 11.6342 21.2264 12.2609 21.9972 12.2609Z" fill="#F41240"/>
+                            </svg></div>
+                      </div></div>
+                  <div class="swiper-slide"><img src="../img/main/slidebuilding.jpg" alt="video-preview" class="swiper-slide__image">
+                    <div class="swiper-slide__play-icon">
+                        <svg class="swiper-slide__play-img" width="153" height="152" viewBox="0 0 154 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M125.736 76.3775C125.736 103.377 103.702 125.276 76.5085 125.276C49.3149 125.276 27.2812 103.377 27.2812 76.3775C27.2812 49.3775 49.3149 27.4785 76.5085 27.4785C103.702 27.4785 125.736 49.3775 125.736 76.3775Z" stroke="white" stroke-width="2"/>
+                            <path d="M89.2122 77.245L70.891 87.7536C70.2243 88.136 69.3935 87.6547 69.3935 86.8862L69.3935 65.869C69.3935 65.1004 70.2243 64.6191 70.891 65.0015L89.2122 75.5101C89.8821 75.8944 89.8821 76.8607 89.2122 77.245Z" stroke="white" stroke-width="2"/>
+                            </svg>
+                      </div><div class="swiper-slide__link">
+                        <div class="swiper-slide__link-title">Архитектура</div>
+                        <div class="swiper-slide__link-btn"><svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15.3496" cy="15.8901" r="15" fill="black"/>
+                            <path d="M17.267 12.6597H9.86133V20.6545H11.9226V18.0534H15.8722L17.6742 20.6545H19.9823L17.9951 18.0415C18.6123 17.9456 19.0566 17.7179 19.3282 17.3583C19.5997 16.9987 19.7355 16.4234 19.7355 15.6562V15.0569C19.7355 14.6014 19.6861 14.2419 19.5997 13.9662C19.5133 13.6905 19.3652 13.4508 19.1554 13.235C18.9332 13.0312 18.6863 12.8874 18.3901 12.7915C18.0939 12.7076 17.7236 12.6597 17.267 12.6597ZM16.9337 16.2915H11.9226V14.4216H16.9337C17.2176 14.4216 17.415 14.4696 17.5138 14.5535C17.6125 14.6374 17.6742 14.7932 17.6742 15.021V15.6922C17.6742 15.9319 17.6125 16.0877 17.5138 16.1716C17.415 16.2555 17.2176 16.2915 16.9337 16.2915Z" fill="white"/>
+                            <path d="M21.9972 12.2609C22.7675 12.2609 23.3923 11.6342 23.3923 10.8611C23.3923 10.0881 22.7675 9.46143 21.9972 9.46143C21.2264 9.46143 20.6016 10.0881 20.6016 10.8611C20.6016 11.6342 21.2264 12.2609 21.9972 12.2609Z" fill="#F41240"/>
+                            </svg></div>
+                      </div></div>
+                  <div class="swiper-slide"><img src="../img/main/slidebike.jpg" alt="video-preview" class="swiper-slide__image">
+                    <div class="swiper-slide__play-icon">
+                        <svg class="swiper-slide__play-img" width="153" height="152" viewBox="0 0 154 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M125.736 76.3775C125.736 103.377 103.702 125.276 76.5085 125.276C49.3149 125.276 27.2812 103.377 27.2812 76.3775C27.2812 49.3775 49.3149 27.4785 76.5085 27.4785C103.702 27.4785 125.736 49.3775 125.736 76.3775Z" stroke="white" stroke-width="2"/>
+                            <path d="M89.2122 77.245L70.891 87.7536C70.2243 88.136 69.3935 87.6547 69.3935 86.8862L69.3935 65.869C69.3935 65.1004 70.2243 64.6191 70.891 65.0015L89.2122 75.5101C89.8821 75.8944 89.8821 76.8607 89.2122 77.245Z" stroke="white" stroke-width="2"/>
+                            </svg>
+                      </div><div class="swiper-slide__link">
+                        <div class="swiper-slide__link-title">BMX</div>
+                        <div class="swiper-slide__link-btn">
+                            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15.3496" cy="15.8901" r="15" fill="black"/>
+                                <path d="M17.267 12.6597H9.86133V20.6545H11.9226V18.0534H15.8722L17.6742 20.6545H19.9823L17.9951 18.0415C18.6123 17.9456 19.0566 17.7179 19.3282 17.3583C19.5997 16.9987 19.7355 16.4234 19.7355 15.6562V15.0569C19.7355 14.6014 19.6861 14.2419 19.5997 13.9662C19.5133 13.6905 19.3652 13.4508 19.1554 13.235C18.9332 13.0312 18.6863 12.8874 18.3901 12.7915C18.0939 12.7076 17.7236 12.6597 17.267 12.6597ZM16.9337 16.2915H11.9226V14.4216H16.9337C17.2176 14.4216 17.415 14.4696 17.5138 14.5535C17.6125 14.6374 17.6742 14.7932 17.6742 15.021V15.6922C17.6742 15.9319 17.6125 16.0877 17.5138 16.1716C17.415 16.2555 17.2176 16.2915 16.9337 16.2915Z" fill="white"/>
+                                <path d="M21.9972 12.2609C22.7675 12.2609 23.3923 11.6342 23.3923 10.8611C23.3923 10.0881 22.7675 9.46143 21.9972 9.46143C21.2264 9.46143 20.6016 10.0881 20.6016 10.8611C20.6016 11.6342 21.2264 12.2609 21.9972 12.2609Z" fill="#F41240"/>
+                                </svg>                                
+                        </div>
+                      </div></div>
+                </div>
+              </div>
+              <div class="swiper-control">
+                <svg class="swiper-icon-next" width="59" height="50" viewBox="0 0 59 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.1673 1.27816L57.1673 25.2781M57.1673 25.2781L33.1673 49.2781M57.1673 25.2781L0.500661 25.2781" stroke="#151515" stroke-width="2"/>
+                  </svg>
+              <div class="swiper-pagination"></div>
+              <svg class="swiper-icon-prev" width="59" height="50" viewBox="0 0 59 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25.4987 49.278L1.49871 25.278M1.49871 25.278L25.4987 1.27803M1.49871 25.278L58.1654 25.278" stroke="#151515" stroke-width="2"/>
+                  </svg>
+              </div>
+              <!-- Carusel-end -->
+        </div>
+        <div class="main-video-image">
+            <img src="../img/main/signalvideo.jpg" alt="decorimage">
+        </div>
+    </div>
+    <div class="main__service main-wrapper" id="service">
+        <h2 class="main__service-title main-title">Услуги</h2>
+        <section class="main__service-body">
+            <div class="main__service_container service_container-left">
+                <article class="service__card">
+                    <div class="service__card_red-stripe"></div>
+                    <h2 class="service__card-title card-title">Трансляции спортивных мероприятий</h2>
+                    <div class="service__card-image">
+                        <img src="../img/main/service/sport.jpg" alt="variety of services" class="service__card-img">
+                    </div>
+                    <p class="service__card-description card-description">Организация и проведение съёмок и трансляций спортивных мероприятий в любой точке России. Опыт команды позволяет делать качественные съемки в самых разных условиях. В том числе подводная съемка и аэросъемка. Компетенции команды позволяют находить неординарные технические решения для выполнения задач заказчика.</p>
+                    <h2 class="service__card-description_short card-description_short">Создаем полный эффект присутствия!
+                    </h2>
+                </article>
+                <article class="service__card">
+                    <div class="service__card_red-stripe"></div>
+                    <h2 class="service__card-title card-title">Онлайн мероприятия</h2>
+                    <div class="service__card-image">
+                        <img src="../img/main/service/online.jpg" alt="variety of services" class="service__card-img">
+                    </div>
+                    <p class="service__card-description card-description">
+                        <ul class="service__card-description-list">
+                            <li>Предоставление бизнес аккаунта</li>
+                            <li>Трансляция на сайт заказчика или любую платформу</li>
+                            <li>Перевод на 7 языков в реальном времени</li>
+                            <li>Запуск опросов и дискуссионных комнат</li>
+                            <li>Отслеживание работы в прямом эфире</li>
+                        </ul>
+                    </p>
+                    <h2 class="service__card-description_short card-description_short">Мы организуем конференцию, чтобы вас услышали!</h2>
+                </article>
+            </div>
+            <div class="main__service_container service_container-right">
+                <article class="service__card">
+                    <div class="service__card_red-stripe"></div>
+                    <h2 class="service__card-title card-title">Создание графики</h2>
+                    <div class="service__card-image">
+                        <img src="../img/main/service/graph.jpg" alt="variety of services" class="service__card-img">
+                    </div>
+                    <p class="service__card-description card-description">
+                        <ul class="service__card-description-list">
+                            <li>Для трансляций</li>
+                            <li>Для телевизионной и онлайн-рекламы</li>
+                            <li>Для кино и сериалов</li>
+                            <li>Для корпоративных фильмов</li>
+                            <li>Для инсталляций и мероприятий</li>
+                        </ul>
+                    </p>
+                    <h2 class="service__card-description_short card-description_short">Визуализируем любые идеи!</h2>
+                </article>
+                <article class="service__card">
+                    <div class="service__card_red-stripe"></div>
+                    <h2 class="service__card-title card-title">Съемка клипов</h2>
+                    <div class="service__card-image">
+                        <img src="../img/main/service/makevideo.jpg" alt="variety of services" class="service__card-img">
+                    </div>
+                    <p class="service__card-description card-description">Организация и проведение съёмок музыкальных клипов и мероприятий для музыкантов. Опыт команды позволяет делать качественные съемки в самых разных условиях. В том числе съемка ка концертах исполнителей. Компетенции команды позволяют находить неординарные технические решения для выполнения задач заказчика.</p>
+                    <h2 class="service__card-description_short card-description_short">Создаем трендовые музыкальные ролики!</h2>
+                </article>
+            </div>
+        </section>
+    </div>
+    <div class="main__about" id="about">
+        <div class="main__about-wraper main-wrapper">
+        <div class="about__advantages-container">
+            <h2 class="about__advantages-title">Компания Signal работает на стыке технологий и творчества.
+            </h2>
+            <p class="about__advantages-subtitle">Агентство оказывает весь комплекс услуг по креативному и техническому обеспечению мероприятий.<br><br>
+                Наша главная задача в любом проекте – найти техническое решение для самых смелых идей заказчика и реализовать их.
+                </p>
+        </div>
+        <h2 class="main__about-title main-title">Сегодня Signal – это</h2>
+        <div class="about__card-container" >
+            <div class="about__card-body about-card">
+                <span class="about__card-title_red card-title_red">1400</span>
+                <p class="about__card-subtitle">часов отснятого материала</p>
+            </div>
+            <div class="about__card-body about-card">
+                <span class="about__card-title_red card-title_red">500</span>
+                <p class="about__card-subtitle">мероприятий по всей территории России</p>
+            </div>
+            <div class="about__card-body about-card">
+                <span class="about__card-title_red card-title_red">17</span>
+                <p class="about__card-subtitle">видов спорта с нашим участием</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="main__partners-wrapper main-wrapper" id="partners">
+        <h2 class="main__partners-title main-title">партнеры</h2>
+        <div class="partners__card-container partners-card">
+            <div class="swiper main__partners-swiper">
+                <div class="swiper-wrapper partners-swiper-wrapper">
+                  <div class="swiper-slide partners__swiper-slide"><img src="../img/main/partners/russia.png" alt="icon partners" class="partners__swiper-slide-img"></div>
+                  <div class="swiper-slide partners__swiper-slide"><img src="../img/main/partners/atlet.png" alt="icon partners" class="partners__swiper-slide-img"></div>
+                  <div class="swiper-slide partners__swiper-slide"><img src="../img/main/partners/moscsport.png" alt="icon partners" class="partners__swiper-slide-img"></div>
+                  <div class="swiper-slide partners__swiper-slide"><img src="../img/main/partners/depsport.png" alt="icon partners" class="partners__swiper-slide-img"></div>
+                  <div class="swiper-slide partners__swiper-slide"><img src="../img/main/partners/atlet.png" alt="icon partners" class="partners__swiper-slide-img"></div>
+                  <div class="swiper-slide partners__swiper-slide"><img src="../img/main/partners/russia.png" alt="icon partners" class="partners__swiper-slide-img"></div>
+                  <div class="swiper-slide partners__swiper-slide"><img src="../img/main/partners/moscsport.png" alt="icon partners" class="partners__swiper-slide-img"></div>
+
+0                </div>
+            </div>
+            <div class="partners__card-body">
+                  <div class="partners__card-picture"><img src="../img/main/partners/russia.png" alt="icon partners" class="partners__card-img"></div>
+                  <div class="partners__card-picture"><img src="../img/main/partners/atlet.png" alt="icon partners" class="partners__card-img"></div>
+                  <div class="partners__card-picture"><img src="../img/main/partners/moscsport.png" alt="icon partners" class="partners__card-img"></div>
+                  <div class="partners__card-picture"><img src="../img/main/partners/depsport.png" alt="icon partners" class="partners__card-img"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main__contacts_black-background" id="contacts">
+        <div class="main__contacts-wrapper main-wrapper">
+            <h2 class="main__contacts-title main-title">Контакты</h2>
+            <div class="main__contacts-container">
+                <div class="contacts__map-wrapper">
+                    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/bolshoy_savvinskiy_pereulok_9s2/Z04YcwFpTkIEQFtvfXtydHxjZw==/inside/?ll=37.569773%2C55.735003&tab=inside&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большой Саввинский переулок, 9с2 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU6qGuulD" width="600" height="542" frameborder="1" allowfullscreen="true" style="position:relative;" class="map-iframe"></iframe></div>
+                </div>
+                <div class="contacts__form-wrapper main-form">
+                    <form action="#" id="contacts__form" method="get">
+                        <label for="contacts__form-name">имя<br>
+                            <input type="text" name="contacts__form" required id="contacts__form-name" placeholder="Введите ваше имя">
+                        </label>
+                        <label for="contacts__form-telephone">телефон<br>
+                            <input type="number" name="contacts__form" required id="contacts__form-telephone" placeholder="+7 (___) ___ - __ - __" maxlength="10">
+                        </label>
+                        <label for="contacts__form-text">Сообщение<br>
+                            <textarea name="contacts__form-text" required id="contacts__form-text" cols="30" rows="10" form="contacts__form" maxlength="300" placeholder="Введите текст сообщения"></textarea>
+                        </label>
+                        <button class="contacts__form_btn" type="submit">Отправить <svg class="btn-arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 6.99985H16.5M16.5 6.99985L10.1667 0.990234M16.5 6.99985L10.1667 13.0095" stroke="#DBDBDB" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></button>
+                    </form>
+                </div>
+                <div class="main__contacts-contacts">
+                    <div class="contacts__contacts-address">
+                        <div class="contacts__contacts-title contacts-title">Адрес</div>
+                        <div class="contacts__contacts-subtitle contacts-subtitle">г. Москва, Большой Саввинский переулок, 9с2
+                        </div>
+                    </div>
+                    <div class="contacts__contacts-mail">
+                        <div class="contacts__contacts-title contacts-title">Почта</div>
+                        <div class="contacts__contacts-subtitle contacts-subtitle">info@signal-tv.com</div>
+                    </div>
+                    <div class="contacts__contacts-telephone">
+                        <div class="contacts__contacts-title contacts-title">Телефон</div>
+                        <div class="contacts__contacts-subtitle contacts-subtitle">+7(925) 077-41-57</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+        <footer class="footer footer_black-background">
+    <div class="footer-wrapper">
+      <div class="header__nav footer-nav">
+            <div class="header__nav-container footer-nav-container">
+                  <div class="header-logo footer-logo"><a href="#headeranchor"><svg width="142" height="29" class="header-logo__img footer-logo__img" viewBox="0 0 142 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_185_1850)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9763 1.53356C32.2508 1.79666 32.4679 2.11271 32.6141 2.46217C32.7604 2.81162 32.8326 3.18704 32.8263 3.56522V3.63823C32.8232 4.00656 32.7464 4.37064 32.6005 4.7095C32.4547 5.04837 32.2425 5.35534 31.9763 5.61275C31.7104 5.88447 31.391 6.09933 31.0379 6.24402C30.6848 6.38872 30.3055 6.46018 29.9233 6.45398C29.1605 6.4583 28.4267 6.16533 27.8804 5.63841C27.3342 5.1115 27.0194 4.39298 27.0043 3.63823V3.56522C26.998 3.18704 27.0702 2.81162 27.2164 2.46217C27.3627 2.11271 27.5798 1.79666 27.8543 1.53356C28.1239 1.26228 28.4462 1.04788 28.8018 0.903297C29.1574 0.758712 29.5389 0.686944 29.9233 0.692326C30.3055 0.686133 30.6848 0.757594 31.0379 0.902289C31.391 1.04698 31.7104 1.26184 31.9763 1.53356Z" fill="#EB5C60"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M136.148 23.7707V28.453H121.825V3.5652H127.647V23.7707H136.148ZM108.112 3.5652L118.184 28.453H112.651L110.678 23.1199H100.381L98.3926 28.453H92.9876L103.028 3.5652H108.112ZM101.985 18.7868H109.074L105.546 9.26337L101.985 18.7868ZM83.637 3.5652H89.3949V28.453H84.6154L72.0892 13.3584V28.453H66.3153V3.5652H71.1269L83.637 18.6598V3.5652ZM51.3352 8.0412C50.1919 8.02617 49.0555 8.21987 47.9831 8.6126C47.0119 8.97344 46.1271 9.53017 45.3849 10.2475C44.6454 10.958 44.0707 11.8191 43.7008 12.7712C43.3006 13.8039 43.1045 14.9032 43.1234 16.0091C43.1041 17.1099 43.3002 18.2041 43.7008 19.2312C44.0792 20.1836 44.6525 21.0483 45.3849 21.7708C46.1139 22.4929 46.9882 23.0553 47.9511 23.4215C49.012 23.8153 50.1381 24.0092 51.2711 23.9929C52.4119 23.9941 53.5449 23.8063 54.6231 23.4374C55.0258 23.2974 55.4171 23.1276 55.794 22.9294V15.6282H61.1027V25.7071C59.6645 26.7575 58.0527 27.5523 56.3393 28.0562C54.5895 28.5973 52.7675 28.8756 50.9342 28.8816C49.0726 28.901 47.2236 28.5781 45.4811 27.9292C43.8575 27.3361 42.3692 26.4298 41.1026 25.2627C39.8808 24.0994 38.905 22.7074 38.2316 21.1676C37.5444 19.5339 37.2006 17.7787 37.2212 16.0091C37.2185 15.2652 37.2742 14.5223 37.388 13.787C37.9311 13.388 38.4436 12.9498 38.9213 12.4759C40.8174 10.6446 42.0565 8.25007 42.4498 5.65717C43.3916 4.99936 44.416 4.46579 45.4971 4.06994C47.2633 3.42802 49.1331 3.11066 51.0144 3.13347C53.0757 3.1273 55.1203 3.49862 57.045 4.22866C57.6052 4.43295 58.1517 4.67259 58.6809 4.94609C58.8638 5.04133 59.2006 5.23814 59.6913 5.53337V10.8506C58.8977 10.2711 58.0614 9.75114 57.1893 9.29511C56.6157 9.02426 56.0202 8.80127 55.409 8.62847C54.7565 8.44557 54.092 8.30768 53.4202 8.21579C52.7306 8.10622 52.0336 8.04786 51.3352 8.0412V8.0412ZM27.0046 15.8345C27.9785 16.0497 28.9738 16.1562 29.9717 16.152C30.9311 16.1549 31.8881 16.057 32.8266 15.8599V28.453H27.0046V15.8345ZM22.7864 21.3644C22.7685 22.6224 22.4262 23.8549 21.792 24.9452C21.049 26.287 19.8863 27.354 18.4784 27.9864C16.8461 28.7538 15.0383 29.0822 13.237 28.9387C11.2675 28.8181 9.66895 28.4827 8.44146 27.9324C7.54886 27.5603 6.70105 27.0908 5.91376 26.5325V20.501C7.0199 21.5443 8.28268 22.4117 9.65718 23.0723C11.0215 23.7241 12.1015 24.0839 12.897 24.1516C13.6614 24.2222 14.4324 24.1468 15.1681 23.9294C15.7707 23.7614 16.3146 23.4318 16.7399 22.9771C17.0652 22.5893 17.2414 22.1001 17.2371 21.5962C17.2464 21.2861 17.1808 20.9784 17.0458 20.6984C16.9108 20.4185 16.7102 20.1745 16.4608 19.9867C15.8458 19.5243 15.1743 19.1403 14.4624 18.8439C13.6572 18.4915 12.7655 18.1265 11.7935 17.7487C10.8804 17.398 10.002 16.9644 9.16961 16.4535C8.42314 15.9947 7.75689 15.419 7.19686 14.7488C6.67796 14.1345 6.31209 13.4082 6.12868 12.6283C5.94422 11.8801 5.85054 11.1128 5.84961 10.3427C5.88652 9.40507 6.08167 8.48018 6.427 7.6063C6.87101 6.49334 7.61423 5.52181 8.57618 4.79689C9.61548 3.96518 11.0397 3.48584 12.8489 3.34934C14.3204 3.23093 15.8013 3.30565 17.2531 3.57155V3.57155C17.233 5.37842 17.6072 7.16829 18.3501 8.81894C17.8219 8.58561 17.2786 8.3873 16.7238 8.22532C15.8495 7.93348 14.9289 7.80118 14.0069 7.83486C13.4918 7.85506 12.9841 7.96243 12.5056 8.1523C12.252 8.26721 12.0258 8.4338 11.8416 8.64117C11.6869 8.82506 11.5564 9.02775 11.4535 9.24432C11.3472 9.48427 11.2697 9.7357 11.2226 9.9935C11.1654 10.3152 11.1546 10.6433 11.1905 10.9681C11.2321 11.2609 11.3378 11.5413 11.5001 11.7897C11.6624 12.038 11.8775 12.2484 12.1303 12.4061C12.7347 12.8422 13.4063 13.1788 14.1191 13.4029C14.8633 13.6484 15.8256 13.9954 17.0061 14.4441C18.0705 14.823 19.085 15.3271 20.0278 15.9456C20.8711 16.5375 21.5514 17.3287 22.0069 18.2471C22.5063 19.2128 22.7731 20.2797 22.7864 21.3644V21.3644Z" />
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_185_1850">
+                        <rect width="130.298" height="28.2464" fill="white" transform="translate(5.84961 0.692322)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                  </a>
+                        </div>
+                  <div class="nav-body nav-body-footer">
+                        <nav class="nav">
+                              <ul class="nav-list-items footer-nav-list-items">
+                                    <li class="nav-list__item"><a href="#about">О нас</a></li>
+                                    <li class="nav-list__item"><a href="#video">Ролики</a></li>
+                                    <li class="nav-list__item"><a href="#service">Услуги</a></li>
+                                    <li class="nav-list__item"><a href="#partners">Партнеры</a></li>
+                                    <li class="nav-list__item"><a href="#contacts">Контакты</a></li>
+                              </ul>
+                        </nav>
+                  </div>
+                  <div class="social-icon footer-social-icon"><a href="https://rutube.ru/" class="footer-social-ref" target="_blank">
+                        <svg width="92" height="19" viewBox="0 0 92 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-social-button_img">
+                              <g clip-path="url(#clip0_185_1817)">
+                              <path d="M10.2245 4.58887H0.103516V15.3889H2.92053V11.8752H8.31834L10.7812 15.3889H13.9355L11.2197 11.8591C12.0632 11.7295 12.6704 11.4219 13.0415 10.9361C13.4126 10.4504 13.5982 9.67315 13.5982 8.63685V7.82728C13.5982 7.21196 13.5307 6.72622 13.4126 6.35377C13.2945 5.98137 13.0921 5.65753 12.8054 5.36608C12.5017 5.09082 12.1644 4.89652 11.7595 4.76697C11.3547 4.65363 10.8486 4.58887 10.2245 4.58887ZM9.7691 9.49502H2.92053V6.96906H9.7691C10.1571 6.96906 10.4269 7.03384 10.5619 7.14718C10.6968 7.26051 10.7812 7.47103 10.7812 7.77868V8.68545C10.7812 9.00931 10.6968 9.21976 10.5619 9.33309C10.4269 9.44642 10.1571 9.49502 9.7691 9.49502Z" fill="#F2F2F2"/>
+                              <path d="M18.1261 12.1991V4.58887H15.3906V12.1343C15.3906 12.7496 15.4398 13.2515 15.5544 13.6239C15.6691 14.0126 15.8656 14.3364 16.1605 14.6117C16.4389 14.9032 16.7665 15.0974 17.1597 15.2107C17.5528 15.3403 18.0442 15.3889 18.6666 15.3889H25.2186C25.8247 15.3889 26.3161 15.3403 26.7092 15.2107C27.1023 15.0974 27.4299 14.9032 27.7248 14.6117C28.0032 14.3364 28.1998 14.0126 28.3144 13.6239C28.4292 13.2515 28.4946 12.7496 28.4946 12.1343V4.58887H25.7592V12.1991C25.7592 12.5229 25.6773 12.7334 25.5462 12.8468C25.4152 12.9601 25.1531 13.0086 24.7764 13.0086H19.1089C18.7158 13.0086 18.4537 12.9601 18.3226 12.8468C18.1916 12.7334 18.1261 12.5229 18.1261 12.1991Z" fill="#F2F2F2"/>
+                              <path d="M37.849 15.3889V6.96906H43.0552V4.58887H29.9512V6.96906H35.1572V15.3889H37.849Z" fill="#F2F2F2"/>
+                              <path d="M47.2472 12.1991V4.58887H44.5117V12.1343C44.5117 12.7496 44.5609 13.2515 44.6755 13.6239C44.7902 14.0126 44.9867 14.3364 45.2816 14.6117C45.56 14.9032 45.8876 15.0974 46.2808 15.2107C46.6739 15.3403 47.1653 15.3889 47.7877 15.3889H54.3397C54.9458 15.3889 55.4372 15.3403 55.8303 15.2107C56.2234 15.0974 56.551 14.9032 56.8459 14.6117C57.1243 14.3364 57.3209 14.0126 57.4355 13.6239C57.5502 13.2515 57.6157 12.7496 57.6157 12.1343V4.58887H54.8803V12.1991C54.8803 12.5229 54.7984 12.7334 54.6673 12.8468C54.5362 12.9601 54.2742 13.0086 53.8975 13.0086H48.23C47.8369 13.0086 47.5748 12.9601 47.4437 12.8468C47.3127 12.7334 47.2472 12.5229 47.2472 12.1991Z" fill="#F2F2F2"/>
+                              <path d="M71.6332 7.73008V7.51963C71.6332 6.51572 71.3709 5.77088 70.8456 5.30131C70.3209 4.83174 69.4846 4.58887 68.3696 4.58887H59.0703V15.3889H68.9106C70.0257 15.3889 70.862 15.1622 71.3873 14.6926C71.912 14.223 72.1743 13.4782 72.1743 12.4744V12.2477C72.1743 11.2438 71.912 10.5313 71.3873 10.1103C71.2887 10.0455 71.1901 9.99693 71.0921 9.9484C70.9935 9.8998 70.8456 9.83508 70.6655 9.77028C71.0263 9.57595 71.2722 9.31689 71.4196 9.02543C71.5511 8.73398 71.6332 8.2968 71.6332 7.73008ZM61.8093 8.91211V6.96906H67.9264C68.3202 6.96906 68.5826 7.03384 68.7141 7.14718C68.8449 7.26051 68.9106 7.47103 68.9106 7.77868V8.10254C68.9106 8.4264 68.8449 8.63685 68.7141 8.75018C68.5826 8.86358 68.3202 8.91211 67.9264 8.91211H61.8093ZM61.8093 13.0086V11.0656H68.484C68.8613 11.0656 69.1237 11.1304 69.2551 11.2438C69.386 11.3571 69.4682 11.5676 69.4682 11.8752V12.1991C69.4682 12.5229 69.386 12.7334 69.2551 12.8468C69.1237 12.9601 68.8613 13.0086 68.484 13.0086H61.8093Z" fill="#F2F2F2"/>
+                              <path d="M76.4261 6.96906H85.5575V4.58887H73.6328V15.3889H86.0088V13.0086H76.4261V11.179H85.3398L85.5575 8.79878H76.4261V6.96906Z" fill="#F2F2F2"/>
+                              <path class="footer-social-button_point" d="M88.6886 4.05024C89.7413 4.05024 90.5952 3.20368 90.5952 2.1594C90.5952 1.11512 89.7413 0.268555 88.6886 0.268555C87.6352 0.268555 86.7812 1.11512 86.7812 2.1594C86.7812 3.20368 87.6352 4.05024 88.6886 4.05024Z" fill="#F41240"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_185_1817">
+                              <rect width="91" height="18" fill="white" transform="translate(0.103516 0.268555)"/>
+                              </clipPath>
+                              </defs>
+                              </svg>
+                  </a></div>
+            </div>
+      </div>
+    </div>
+</footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
